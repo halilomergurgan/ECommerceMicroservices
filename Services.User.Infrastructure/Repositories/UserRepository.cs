@@ -26,6 +26,12 @@ public class UserRepository : IUserRepository
             .FirstOrDefaultAsync(u => u.Email == email);
     }
 
+    public async Task<Domain.Entities.User?> GetByRefreshTokenAsync(string refreshToken)
+    {
+        return await _context.Users
+            .FirstOrDefaultAsync(u => u.RefreshToken == refreshToken);
+    }
+
     public async Task<List<Domain.Entities.User>> GetAllAsync()
     {
         return await _context.Users

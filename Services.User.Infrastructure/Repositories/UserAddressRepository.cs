@@ -90,9 +90,6 @@ namespace Services.User.Infrastructure.Repositories
 
         public async Task<List<UserAddress>> GetAllAsync()
         {
-            // Burada kendi ORM/DbContext'inize göre implementasyon yapmalısınız.
-            // Örnek:
-            // return await _dbContext.UserAddresses.ToListAsync();
             throw new NotImplementedException();
         }
     }

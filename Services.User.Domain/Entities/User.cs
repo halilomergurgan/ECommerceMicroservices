@@ -11,6 +11,9 @@ public class User : BaseEntity
     public string? PhoneNumber { get; set; }
     public DateTime DateOfBirth { get; set; }
     public bool IsActive { get; set; }
+
+    public string? RefreshToken { get; set; }
+    public DateTime? RefreshTokenExpiryTime { get; set; }
     
     public ICollection<UserAddress> Addresses { get; set; } = new List<UserAddress>();
 
