@@ -6,6 +6,7 @@ namespace Services.User.API.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
+[Authorize]
 public class UserAddressesController : ControllerBase
 {
     private readonly IUserAddressService _userAddressService;
