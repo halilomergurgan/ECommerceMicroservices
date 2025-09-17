@@ -12,5 +12,5 @@ Task<UserEntity?> GetByIdAsync(Guid id);
     Task DeleteAsync(Guid id);
     Task<bool> ExistsAsync(Guid id);
     Task<bool> EmailExistsAsync(string email);
-Task<UserEntity?> GetByRefreshTokenAsync(string refreshToken);
+    Task<UserEntity?> GetByRefreshTokenAsync(string refreshToken);
 }

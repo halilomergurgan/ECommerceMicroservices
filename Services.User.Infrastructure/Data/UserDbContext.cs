@@ -11,7 +11,8 @@ public class UserDbContext : DbContext
     }
 
     public DbSet<Domain.Entities.User> Users { get; set; }
-     public DbSet<UserAddress> UserAddresses { get; set; }
+    public DbSet<UserAddress> UserAddresses { get; set; }
+    public DbSet<Product> Products { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -19,5 +20,6 @@ public class UserDbContext : DbContext
 
         modelBuilder.ApplyConfiguration(new UserConfiguration());
         modelBuilder.ApplyConfiguration(new UserAddressConfiguration());
+        modelBuilder.ApplyConfiguration(new ProductConfiguration());
     }
 }
